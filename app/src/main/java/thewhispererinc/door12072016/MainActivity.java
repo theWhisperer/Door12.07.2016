@@ -15,6 +15,7 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.nio.charset.Charset;
@@ -36,8 +37,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(MainActivity.class.getSimpleName(), "***********************onCreate() ********************************");
         FirebaseDatabase database = FirebaseDatabase.getInstance(); ///working here***********************************************
+        DatabaseReference myRef = database.getReference("message");
+        Log.d("testing", "*********************** writing to database ********************************");
 
-
+        myRef.setValue("Working database");
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
         radio_button= (RadioButton) findViewById(R.id.radioButton5);
 
