@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "108202454323",
+    "firebase_url": "https://securitydoorfacca-afc17.firebaseio.com",
+    "project_id": "securitydoorfacca-afc17",
+    "storage_bucket": "securitydoorfacca-afc17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108202454323:android:26ba254eaf9f5bfc",
+        "android_client_info": {
+          "package_name": "thewhispererinc.door12072016"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108202454323-img0dv1j0qqc6tof5e4jj1gu16nsgkq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6CsX02ojryFfnq8_zGQEO8xZ0RVtWIOc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

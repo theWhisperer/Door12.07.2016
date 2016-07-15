@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="dd7676ac12aa6653718b7ea33d93ce9d6915d526">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.2.0_768f6bcee426df0ccba0ccfba56608110674a96e\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="dc4c18602ecffb3e69cda6cdc51ba4feac0f97d7">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.2.0_d251e639ed84ecf68c8c7fe2b113ac46b28b1fd0\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jay\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.2.2\d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b\jackson-core-2.2.2.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-core-2.2.2_148ef9c63efccc8ef2155f88912e49a275de7f57\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_5ba777dceb70d230d8cc1a76b147e795e6192718\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="363f626ad5686283250cdb6073ae1bba5cb07a87">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.2.0_fc0f589611e4ab1cb68f6e158268e69a7097584b\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jay\.gradle\caches\modules-2\files-2.1\com.firebase\tubesock\0.0.11\d37cb67277928cf59344b4196af8d9cee1f1a27c\tubesock-0.0.11.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\tubesock-0.0.11_d7088542f05f03d3faaaf03448318767703cc031\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jay\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.2.2\285cb9c666f0f0f3dd8a1be04e1f457eb7b15113\jackson-annotations-2.2.2.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-annotations-2.2.2_0d20170bf8518d7f8e4809d400a7d42592182b5d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="4bb31ecb531b2362ab8263bf32272e2294ec87cd">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0459ef1b898407eb4374aa3c33517037590e4690\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jay\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-jvm\2.3.1\4d53b7d6983247af02b8fe7e4228fff555a5e828\firebase-client-jvm-2.3.1.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="4d53b7d6983247af02b8fe7e4228fff555a5e828">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\firebase-client-jvm-2.3.1_b7474f07c95cc7f6e7308f2707eae201f95318e4\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="4838df6db988160b107e954e02a745370df543b6">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.2.0_ec3303e8b9f5f45f8783930307acd18dab1ff697\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="30489a97b06cc3945bdbcc1770089af9e3b3b64d">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.2.0_35dcb6ba32e188187588ff4d631b61a0b4ae14b2\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.0_80fd2b804a3a986752981da503779f986f02c760\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jay\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.0_4e4b45ce7a01f23c1e9a18e58c3d2da555062986\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="f23aaa7125838166d9a549f05fef49c34cf8ba31">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_dd0f09c28fa794b5d2578cfedac80ece9c0f13bb\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jay\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.2.2\3c8f6018eaa72d43b261181e801e6f8676c16ef6\jackson-databind-2.2.2.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-databind-2.2.2_56e23fb1091636fb54611c78334669371a93a6a7\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="fb15fd9774b5c51dcb39d8e6fa1b6f06bcd1cd34">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.2.0_b6419f7b1dfb0cf66386fa427c22ec7f9b809651\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="d7572433ba21aa9e4624c819fa738b2748b82d05">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.2.0_befcaa523cc22838229ec3bc53dad6688e750b19\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="33203b081101ca6242a4cd746aafe5fc2dd98a34">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.2.0_0bef218f5b3fe69b18400df1e46bca1e2e3f2c49\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_bec72204100f2e821f22b24a5bb545bd0032f66b\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jay\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-android\2.3.1\be29b24233711c419ce935aa0a1b12ebc49d1c9a\firebase-client-android-2.3.1.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="be29b24233711c419ce935aa0a1b12ebc49d1c9a">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\firebase-client-android-2.3.1_d4ce82372d5572dcec7cd536e4d3c41a7f8f2e91\classes.dex" />
+    </item>
+    <item
+        jar="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="593fbaec1c3e100480a2bd72457b64b7dde6ac2d">
+        <dex dex="C:\Code\JavaApp\Door12.07.2016\theWhispererSecurityDoor\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.2.0_9cf99aaaa995656e0593da8ec1c22474ef6636d1\classes.dex" />
+    </item>
+
+</items>
