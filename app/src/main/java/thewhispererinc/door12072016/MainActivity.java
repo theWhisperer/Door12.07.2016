@@ -40,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("message");
         Log.d("testing", "*********************** writing to database ********************************");
 
-        myRef.setValue("Working database");
+        //myRef.setValue("able to write to data base");
+        //myRef.setValue("anothersage");
+
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
         radio_button= (RadioButton) findViewById(R.id.radioButton5);
 
@@ -93,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Door : "+ text, Toast.LENGTH_SHORT).show();
                     radio_button= (RadioButton) findViewById(R.id.radioButton);
                     radio_button.setEnabled(true);
-                    Firebase myFireBase = new Firebase("https://securitydoorfacca-afc17.firebaseio.com/");
+                    Firebase myFireBase = new Firebase("https://securitydoorfacca-afc17.firebaseio.com/DoorInstance");
                     myFireBase.child("connect").setValue("Opening Door");
 
                     //need to fix checkDoorPermission()
