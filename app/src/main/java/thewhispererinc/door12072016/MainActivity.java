@@ -7,27 +7,39 @@ import android.nfc.NfcAdapter;
 import android.nfc.NfcEvent;
 import android.nfc.tech.Ndef;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.firebase.client.AuthData;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.nio.charset.Charset;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 
     private NfcAdapter mNfcAdapter;
     private RadioButton radio_button;
-
+    SignInButton signInButton;
+    GoogleApiClient mGoogleApiClient;
     private NdefMessage mNdefMessage;
 
 
@@ -38,12 +50,19 @@ public class MainActivity extends AppCompatActivity {
         Firebase.setAndroidContext(this);
         setContentView(R.layout.activity_main);
         Log.d(MainActivity.class.getSimpleName(), "***********************onCreate() ********************************");
-        FirebaseDatabase database = FirebaseDatabase.getInstance(); ///working here***********************************************
-        DatabaseReference myRef = database.getReference("message");
-        Log.d("testing", "*********************** writing to database ********************************");
 
-        myRef.setValue("able to write to data base");
-        //myRef.setValue("anothersage");
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .enableAutoManage(this,this)
+                .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
+                .build();
+
+        signInButton = (SignInButton) findViewById(R.id.sign_in_button);
+        signInButton.setOnClickListener(this);
+
+
 
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
         radio_button= (RadioButton) findViewById(R.id.radioButton5);
@@ -70,6 +89,43 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public  void onClick(View v)
+    {
+        switch (v.getId())
+        {
+            case R.id.sign_in_button:
+                signIn();
+                break;
+
+        }
+    }
+
+    private void signIn() {
+        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+        startActivityForResult(signInIntent, 9001);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == 9001) {
+            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            handleSignInResult(result);
+        }
+    }
+
+    private void handleSignInResult(GoogleSignInResult result) {
+        Log.d("sign in event", "handleSignInResult:" + result.isSuccess());
+        if (result.isSuccess()) {
+            GoogleSignInAccount acct = result.getSignInAccount();
+            Toast.makeText(getApplicationContext(), acct.getDisplayName() + " signed in", Toast.LENGTH_SHORT).show();
+        }
+    }
+
     @Override
     protected void onNewIntent(Intent intent)
     {
@@ -97,20 +153,27 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Door : "+ text, Toast.LENGTH_SHORT).show();
                     radio_button= (RadioButton) findViewById(R.id.radioButton);
                     radio_button.setEnabled(true);
-                    Firebase myFireBase = new Firebase("https://securitydoorfacca-afc17.firebaseio.com/DoorInstance");
-                    myFireBase.authWithOAuthToken("google","<OAuth Token>", new Firebase.AuthResultHandler(){
-                    @Override
-                    public void onAuthenticated(AuthData authData) {
-                        // the Google user is now authenticated with your Firebase app
-                        Toast.makeText(getApplicationContext(), "Authenticated", Toast.LENGTH_SHORT).show();
+
+                   DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
+                    Log.d("testing", "*********************** writing to database ********************************");
+                    Firebase myFireBase = new Firebase("https://securitydoorfacca-afc17.firebaseio.com/");
+                    DatabaseReference myRef = databaseRef.child("message");
+
+                    //myRef.push("working now!!!");
+
+
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                    if (user != null) {
+                        // User is signed in
+                        Toast.makeText(getApplicationContext(), "signed in", Toast.LENGTH_SHORT).show();
+                    } else {
+                        // No user is signed in
+                        Toast.makeText(getApplicationContext(), "not signed in", Toast.LENGTH_SHORT).show();
                     }
-                    @Override
-                    public void onAuthenticationError(FirebaseError firebaseError) {
-                        // there was an error
-                        Toast.makeText(getApplicationContext(), "Not Authenticated", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                    myFireBase.child("message").setValue("Opening Door");
+
+
+
+
 
                     //need to fix checkDoorPermission()
                     checkDoorPermission(text);
@@ -170,5 +233,10 @@ public class MainActivity extends AppCompatActivity {
 
         //if (mNfcAdapter != null)
             //mNfcAdapter.setNdefPushMessage(mNdefMessage,this);
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
     }
 }

@@ -16,7 +16,7 @@ public class ReadPermissionFile extends AsyncTask {
     @Override
     protected Object doInBackground(Object[] params) {
 
-        try {
+        /*try {
             URL url = new URL("\n" +
                     "https://drive.google.com/a/facca.com/file/d/0B5oZIiu2TcSvTml2LVhpNUxEbE0/view?usp=sharing\n");
             //BufferedReader input = new BufferedReader(new InputStreamReader(url.openStream()));
@@ -30,12 +30,12 @@ public class ReadPermissionFile extends AsyncTask {
             }
 
 
-            /*while ((inputLine = input.readLine())!=null) {
+            *//*while ((inputLine = input.readLine())!=null) {
 
                 System.out.println(inputLine);
                 // Write data to file
                 //output.write(data, 0, count);
-            }*/
+            }*//*
             // Flush output
             //output.flush();
             // Close streams
@@ -45,7 +45,7 @@ public class ReadPermissionFile extends AsyncTask {
 
         } catch (Exception e) {
             Log.e("Error: ", e.getMessage());
-        }
+        }*/
         return null;
 
     }
