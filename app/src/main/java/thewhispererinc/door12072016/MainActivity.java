@@ -14,7 +14,9 @@ import android.util.Log;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.firebase.client.AuthData;
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("message");
         Log.d("testing", "*********************** writing to database ********************************");
 
-        //myRef.setValue("able to write to data base");
+        myRef.setValue("able to write to data base");
         //myRef.setValue("anothersage");
 
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
@@ -96,7 +98,19 @@ public class MainActivity extends AppCompatActivity {
                     radio_button= (RadioButton) findViewById(R.id.radioButton);
                     radio_button.setEnabled(true);
                     Firebase myFireBase = new Firebase("https://securitydoorfacca-afc17.firebaseio.com/DoorInstance");
-                    myFireBase.child("connect").setValue("Opening Door");
+                    myFireBase.authWithOAuthToken("google","<OAuth Token>", new Firebase.AuthResultHandler(){
+                    @Override
+                    public void onAuthenticated(AuthData authData) {
+                        // the Google user is now authenticated with your Firebase app
+                        Toast.makeText(getApplicationContext(), "Authenticated", Toast.LENGTH_SHORT).show();
+                    }
+                    @Override
+                    public void onAuthenticationError(FirebaseError firebaseError) {
+                        // there was an error
+                        Toast.makeText(getApplicationContext(), "Not Authenticated", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                    myFireBase.child("message").setValue("Opening Door");
 
                     //need to fix checkDoorPermission()
                     checkDoorPermission(text);
