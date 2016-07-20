@@ -23,9 +23,11 @@ import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.auth.api.signin.SignInAccount;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     SignInButton signInButton;
     GoogleApiClient mGoogleApiClient;
     private NdefMessage mNdefMessage;
+    Firebase myFireBase;
+    FirebaseAuth auth;
 
 
 
@@ -50,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Firebase.setAndroidContext(this);
         setContentView(R.layout.activity_main);
         Log.d(MainActivity.class.getSimpleName(), "***********************onCreate() ********************************");
+
+        myFireBase = new Firebase("https://securitydoorfacca-afc17.firebaseio.com/");
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -122,9 +128,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d("sign in event", "handleSignInResult:" + result.isSuccess());
         if (result.isSuccess()) {
             GoogleSignInAccount acct = result.getSignInAccount();
+
+            auth.signInAnonymously();
+
             Toast.makeText(getApplicationContext(), acct.getDisplayName() + " signed in", Toast.LENGTH_SHORT).show();
+
+
+
         }
     }
+
 
     @Override
     protected void onNewIntent(Intent intent)
@@ -154,22 +167,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     radio_button= (RadioButton) findViewById(R.id.radioButton);
                     radio_button.setEnabled(true);
 
-                   DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
+                    DatabaseReference databaseRef;
                     Log.d("testing", "*********************** writing to database ********************************");
-                    Firebase myFireBase = new Firebase("https://securitydoorfacca-afc17.firebaseio.com/");
-                    DatabaseReference myRef = databaseRef.child("message");
+                    FirebaseApp app = FirebaseApp.getInstance();
 
-                    //myRef.push("working now!!!");
+                    FirebaseDatabase database = FirebaseDatabase.getInstance(app);
+                    auth = FirebaseAuth.getInstance(app);
+                    auth.signInAnonymously();
+                    databaseRef = database.getReference("message");
+                    databaseRef.push().setValue("message sent");
+                    Toast.makeText(getApplicationContext(), "" + auth.getCurrentUser(), Toast.LENGTH_SHORT).show();
 
 
-                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    if (user != null) {
+
+
+
+
+
+                    /*//FirebaseUser user = FirebaseAuth.getInstance(app).getCurrentUser();
+                    if (myFireBase.getAuth() != null) {
                         // User is signed in
                         Toast.makeText(getApplicationContext(), "signed in", Toast.LENGTH_SHORT).show();
                     } else {
                         // No user is signed in
                         Toast.makeText(getApplicationContext(), "not signed in", Toast.LENGTH_SHORT).show();
-                    }
+                    }*/
 
 
 
